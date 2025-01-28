@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nest Inn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans  text-pink-900">
+  <nav class="bg-rose-200 shadow-md p-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="text-pink-900 text-xl font-bold">NestInn.com</div>
+      <div class="hidden md:flex space-x-8 text-pink-900">
+        <a href="#" class="hover:text-pink-300">Home</a>
+        <a href="#services" class="hover:text-pink-300">Services</a>
+        <a href="#about" class="hover:text-pink-300">Sign In</a>
+        <a href="#about" class="hover:text-pink-300">Register</a>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-btn" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="menu" class="hidden flex-col md:hidden space-y-2 bg-white mt-4 p-4 shadow-md">
+      <a href="#" class="block  hover:text-pink-300">Home</a>
+      <a href="#about" class="block  hover:text-pink-300">About</a>
+      <a href="#services" class="block  hover:text-pink-300">Services</a>
+      <a href="#contact" class="block  hover:text-pink-300">Contact</a>
+    </div>
+  </nav>
+  <header class="bg-rose-200 text-left py-20 px-10">
+    <br/>
+    <h1 class="text-4xl font-bold text-pink-900">Find comfort as you go!</h1>
+    <p class="text-xl text-gray-700 mt-4"><i>Search deals on hotels, homes, and much more...</i></p>
+  </header>
+  <section id="about" class="py-5">
+    <div class="max-w-7xl mx-auto px-6 text-left">
+      <div class="mt-8 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 text-left">
+        <div>
+          <label for="destination" class="block text-lg ">Destination</label>
+          <select id="destination" class="w-full md:w-64 p-2 border border-gray-300 rounded-md">
+            <option>Select Destination</option>
+            <option value="paris">Paris</option>
+            <option value="new-york">New York</option>
+            <option value="tokyo">Tokyo</option>
+            <option value="london">London</option>
+          </select>
+        </div>
+        <div>
+          <label for="from-date" class="block text-lg ">From</label>
+          <input type="date" id="from-date" class="w-full md:w-64 p-2 border border-gray-300 rounded-md">
+        </div>
+        <div>
+          <label for="to-date" class="block text-lg ">To</label>
+          <input type="date" id="to-date" class="w-full md:w-64 p-2 border border-gray-300 rounded-md">
+        </div>
+        <div><a href="#book" class="mt-6 inline-block bg-rose-300 py-2 px-6 rounded-lg hover:bg-pink-500 transition">
+          Search Stays
+        </a></div>
+      </div> 
+  </section>
+  <section id="services" class="py-20 px-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center">Everything You Need, All in One Place</h2>
+      <div class="mt-12 grid gap-8 md:grid-cols-3">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+          <img src="https://img.freepik.com/free-vector/bedroom-castle-palace_33099-1742.jpg" alt="Luxury Rooms" class="w-full h-48 object-cover rounded-md">
+          <h3 class="text-2xl font-semibold mt-4">Luxury Rooms</h3>
+          <p class="mt-4 text-gray-600">Relax and enjoy your stay in our elegantly designed rooms.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+          <img src="https://img.freepik.com/premium-photo/luxurious-spa-resort-guests-relaxing-3d-cartoon-style-massages-hot-tubs-wellness-treatments_980716-173995.jpg" alt="Spa & Wellness" class="w-full h-48 object-cover rounded-md">
+          <h3 class="text-2xl font-semibold  mt-4">Spa & Wellness</h3>
+          <p class="mt-4 text-gray-600">Indulge in rejuvenation at our in-house spa and wellness center.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+          <img src="https://img.freepik.com/premium-vector/cartoon-illustration-table-with-turkey-it_889056-186424.jpg" alt="Gourmet Dining" class="w-full h-48 object-cover rounded-md">
+          <h3 class="text-2xl font-semibold mt-4">Gourmet Dining</h3>
+          <p class="mt-4 text-gray-600">Savor meals prepared by top chefs in our gourmet restaurants.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class=" py-6 text-center text-gray-600">
+    <p>&copy; 2025 Nest Inn. All rights reserved.</p>
+  </footer>
+  <script>
+    document.getElementById("menu-btn").addEventListener("click", () => {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>
